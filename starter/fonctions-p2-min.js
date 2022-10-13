@@ -14,19 +14,38 @@ N.B. Faites deux versions :
 
 // synatxe classique
 
-function calcMin(number1, number2) {
+function calcMin1(number1, number2) {
     if (number1 > number2) {
-
+        return number2;
     }
+    return number1;
 }
+
+console.log(calcMin1(4.5, 5));
+console.log(calcMin1(19, 9));
+console.log(calcMin1(1, 1));
 
 
 // arrow function
 
+const calcMin2 = (number1, number2) => {
+    if (number1 > number2) {
+        return number2;
+    }
+    return number1;
+}
+
+console.log(calcMin2(4.5, 5));
+console.log(calcMin2(19, 9));
+console.log(calcMin2(1, 1));
 
 
 // arrow function écriture encore plus concise
 
+const calcMin3 = (number1, number2) => (number1 > number2) ? number2 : number1;
 
+console.log(calcMin3(4.5, 5));
+console.log(calcMin3(19, 9));
+console.log(calcMin3(1, 1));
 
 

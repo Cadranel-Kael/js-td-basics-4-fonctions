@@ -20,9 +20,13 @@ Utiliser la fonction qu'on vient de créer pour calculer
 Afficher ces âges dans la console
 */
 
+const calcAge = (birthYear) => new Date().getFullYear() - birthYear;
 
+console.log(calcAge(1990));
+console.log(calcAge(1948));
+console.log(calcAge(1969));
 
-
+//console.log(new Date().getFullYear());
 
 
 // 2. Fonction avec deux paramètres et un return
@@ -42,6 +46,19 @@ Utiliser ensuite la fonction pour calculer dans cobien d'années seront pensionn
 	- Jane (née en 1969)
 */
 
+function giveYearsUntilRetirement(year, firstName) {
+    let retirement = 64 - calcAge(year)
+    if (retirement > 0) {
+        return `${firstName} prendra sa pension dans ${retirement} ans`;
+    }
+    if (retirement <= 0) {
+        return `${firstName} est déjà pensionné(e)`;
+    }
+}
+
+console.log(giveYearsUntilRetirement(1990, `John`));
+console.log(giveYearsUntilRetirement(1948, `Mike`));
+console.log(giveYearsUntilRetirement(1969, `Jane`));
 
 
 

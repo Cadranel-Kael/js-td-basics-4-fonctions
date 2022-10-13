@@ -32,4 +32,49 @@ Par exemple,
  	pour retourner true ou fasle selon que la date est valide ou pas.
 */
 
+function isLeapYear(year) {
+    if (year % 4 === 0) {
+        return true
+    }
+    if (year % 100 === 0 && year % 400 === 0) {
+        return true;
+    }
+    return false;
+}
 
+function isValidDate(day, month, year) {
+    if (day < 1 || day > 31) {
+        return false;
+    }
+    switch (month) {
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            if (day <= 30) {
+                return true;
+            }
+            break;
+        case 2:
+            if (isLeapYear(year) && day <= 29) {
+                return true;
+            }
+            if (!isLeapYear(year) && day <=28) {
+                return true;
+            }
+            break;
+        default:
+            if (day <= 31) {
+                return true;
+            }
+    }
+    return false;
+}
+
+console.log(isValidDate(31, 1, 2019)); // le 31 janvier 2019 est une date valide
+console.log(isValidDate(28, 2, 2019)); // le 28 février 2019 est une date valide
+console.log(isValidDate(29, 2, 2019)); // le 29 février 2019 n'est PAS une date valide
+console.log(isValidDate(29, 2, 2020)); // le 29 février 2020 est une date valide
+console.log(isValidDate(30, 2, 2020)); // le 30 février 2020 n'est PAS une date valide
+console.log(isValidDate(30, 4, 2020)); // le 30 avril 2020 est une date valide
+console.log(isValidDate(31, 4, 2020)); // le 31 avril 2020 n'est PAS une date valide
