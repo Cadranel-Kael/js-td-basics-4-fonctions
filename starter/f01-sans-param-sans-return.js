@@ -48,12 +48,14 @@ EXERCICE :
 
 // 1°) Déclarer la fonction
 
-
+function direBonjour() {
+    console.log(`Bonjour`);
+}
 
 
 // 2°) Exécuter la fonction
 
-
+direBonjour();
 
 
 // 3°) Valeur de retour de cette fonction

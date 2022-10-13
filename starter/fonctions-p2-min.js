@@ -14,6 +14,11 @@ N.B. Faites deux versions :
 
 // synatxe classique
 
+function calcMin(number1, number2) {
+    if (number1 > number2) {
+
+    }
+}
 
 
 // arrow function

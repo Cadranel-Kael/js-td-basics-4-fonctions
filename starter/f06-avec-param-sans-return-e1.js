@@ -7,7 +7,7 @@
 // 1°) Fonctions sans paramètre (pour comprendre l'utilité du paramètre) :
 
 /* EXERCICE 1 : Plusieurs fonctions sans paramètre
-1. a) Déclarer une fonction double3 qui affiche dasn la console 'Le double de 3 est '
+1. a) Déclarer une fonction double3 qui affiche dans la console 'Le double de 3 est '
    b) Appeler cette fonction
 Imaginons à présent qu'on a besoin de calculer le double d'autres nombres 
 On a besoin de déclarer une fonction pour calculer le double de 10 
@@ -15,9 +15,6 @@ et puis de déclarer une AUTRE fonction pour calculer le double de 24
 et puis de déclarer une AUTRE fonction pour calculer le double de 128
 etc. et ainsi de suite à chaque fois qu'on veut calculer le double d'un nouveau nombre
 */
-
-
-
 
 
 

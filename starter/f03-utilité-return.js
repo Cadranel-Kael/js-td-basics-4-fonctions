@@ -27,4 +27,15 @@ Exécutez les deux fonctions
 */
 
 
+function calcule1() {
+    let resultat1 = 2 + 3;
+    return resultat1;
+}
 
+console.log(calcule1());
+
+function calcule2() {
+    return calcule1()*2;
+}
+
+console.log(calcule2());
